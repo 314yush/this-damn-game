@@ -66,7 +66,7 @@ const wetWasteItems: WasteItemType[] = [
   { name: "Used tea strainer contents", category: "wet-waste", difficulty: "Difficult" },
   { name: "Spoiled paneer", category: "wet-waste", difficulty: "Difficult" },
   { name: "Rancid ghee", category: "wet-waste", difficulty: "Difficult" },
-  { name: "Wet supari (areca nut)", category: "wet-waste", difficulty: "Difficult" },
+  { name: "Supari (areca nut)", category: "wet-waste", difficulty: "Difficult" },
   { name: "Used mehendi (henna) paste", category: "wet-waste", difficulty: "Difficult" },
   { name: "Soiled banana leaf plates", category: "wet-waste", difficulty: "Difficult" },
   { name: "Bhutta (corn) cobs", category: "wet-waste", difficulty: "Difficult" },
@@ -75,15 +75,15 @@ const wetWasteItems: WasteItemType[] = [
 
   // Most Difficult
   { name: "Spoiled soya chunks", category: "wet-waste", difficulty: "Most Difficult" },
-  { name: "Wet kumkum powder", category: "wet-waste", difficulty: "Most Difficult" },
+  { name: "kumkum powder", category: "wet-waste", difficulty: "Most Difficult" },
   { name: "Expired grated coconut", category: "wet-waste", difficulty: "Most Difficult" },
   { name: "Used clay for Ganesh idols", category: "wet-waste", difficulty: "Most Difficult" },
-  { name: "Wet sandal (chandan) paste", category: "wet-waste", difficulty: "Most Difficult" },
-  { name: "Biodegradable gulal from Holi", category: "wet-waste", difficulty: "Most Difficult" },
-  { name: "Expired liquid jaggery", category: "wet-waste", difficulty: "Most Difficult" },
+  { name: "sandal (chandan) paste", category: "wet-waste", difficulty: "Most Difficult" },
+  { name: "gulal from Holi", category: "wet-waste", difficulty: "Most Difficult" },
+  { name: "liquid jaggery", category: "wet-waste", difficulty: "Most Difficult" },
   { name: "Used natural sindhoor", category: "wet-waste", difficulty: "Most Difficult" },
   { name: "Expired liquid ayurvedic tonics", category: "wet-waste", difficulty: "Most Difficult" },
-  { name: "Wet floral rangoli remains", category: "wet-waste", difficulty: "Most Difficult" },
+  { name: "floral rangoli remains", category: "wet-waste", difficulty: "Most Difficult" },
   // dry waste
   // Easiest
   { name: "Old newspaper", category: "dry-waste", difficulty: "Easiest" },
@@ -101,10 +101,10 @@ const wetWasteItems: WasteItemType[] = [
   { name: "Empty tetra pak of juice", category: "dry-waste", difficulty: "Easy" },
   { name: "Plastic bottle cap", category: "dry-waste", difficulty: "Easy" },
   { name: "Old magazine", category: "dry-waste", difficulty: "Easy" },
-  { name: "Empty ghee container", category: "dry-waste", difficulty: "Easy" },
+  { name: "Old container", category: "dry-waste", difficulty: "Easy" },
   { name: "Broken plastic comb", category: "dry-waste", difficulty: "Easy" },
   { name: "Used paper cup", category: "dry-waste", difficulty: "Easy" },
-  { name: "Empty plastic milk packet", category: "dry-waste", difficulty: "Easy" },
+  { name: "Empty milk packet", category: "dry-waste", difficulty: "Easy" },
   { name: "Discarded wedding card", category: "dry-waste", difficulty: "Easy" },
   { name: "Empty glass pickle jar", category: "dry-waste", difficulty: "Easy" },
   { name: "Used paper plate", category: "dry-waste", difficulty: "Easy" },
@@ -114,7 +114,7 @@ const wetWasteItems: WasteItemType[] = [
   { name: "Broken plastic bucket", category: "dry-waste", difficulty: "Medium" },
   { name: "Old textbook", category: "dry-waste", difficulty: "Medium" },
   { name: "Empty aluminium foil roll", category: "dry-waste", difficulty: "Medium" },
-  { name: "Discarded plastic toy", category: "dry-waste", difficulty: "Medium" },
+  { name: "plastic toy", category: "dry-waste", difficulty: "Medium" },
   { name: "Used ball pen", category: "dry-waste", difficulty: "Medium" },
   { name: "Empty packet of detergent", category: "dry-waste", difficulty: "Medium" },
   { name: "Broken plastic hanger", category: "dry-waste", difficulty: "Medium" },
@@ -125,12 +125,12 @@ const wetWasteItems: WasteItemType[] = [
   { name: "Empty toothpaste tube", category: "dry-waste", difficulty: "Difficult" },
   { name: "Broken ceramic cup", category: "dry-waste", difficulty: "Difficult" },
   { name: "Used disposable plastic cutlery", category: "dry-waste", difficulty: "Difficult" },
-  { name: "Empty plastic container of spices", category: "dry-waste", difficulty: "Difficult" },
+  { name: "Empty plastic container", category: "dry-waste", difficulty: "Difficult" },
   { name: "Discarded CD/DVD", category: "dry-waste", difficulty: "Difficult" },
-  { name: "Empty blister pack of tablets", category: "dry-waste", difficulty: "Difficult" },
+  { name: "Empty pack of tablets", category: "dry-waste", difficulty: "Difficult" },
   { name: "Broken glass bangle", category: "dry-waste", difficulty: "Difficult" },
-  { name: "Used tent card from restaurant", category: "dry-waste", difficulty: "Difficult" },
-  { name: "Empty aerosol spray can", category: "dry-waste", difficulty: "Difficult" },
+  { name: "Used tent", category: "dry-waste", difficulty: "Difficult" },
+  { name: "Empty spray can", category: "dry-waste", difficulty: "Difficult" },
   { name: "Discarded plastic folder", category: "dry-waste", difficulty: "Difficult" },
 
   // Most Difficult
@@ -138,7 +138,7 @@ const wetWasteItems: WasteItemType[] = [
   { name: "Broken clay diya", category: "dry-waste", difficulty: "Most Difficult" },
   { name: "Used agarbatti (incense) stand", category: "dry-waste", difficulty: "Most Difficult" },
   { name: "Empty plastic container of kumkum", category: "dry-waste", difficulty: "Most Difficult" },
-  { name: "Discarded rakhi (non-biodegradable)", category: "dry-waste", difficulty: "Most Difficult" },
+  { name: "Discarded rakhi", category: "dry-waste", difficulty: "Most Difficult" },
   { name: "Empty foil packet of pan masala", category: "dry-waste", difficulty: "Most Difficult" },
   { name: "Broken plastic bindi box", category: "dry-waste", difficulty: "Most Difficult" },
   { name: "Used thermocol plate", category: "dry-waste", difficulty: "Most Difficult" },
@@ -153,7 +153,7 @@ const wetWasteItems: WasteItemType[] = [
   { name: "Mosquito coil", category: "hazardous-waste", difficulty: "Easiest" },
   { name: "Roach spray", category: "hazardous-waste", difficulty: "Easiest" },
   { name: "Broken CFL", category: "hazardous-waste", difficulty: "Easiest" },
-  { name: "Car battery", category: "hazardous-waste", difficulty: "Easiest" },
+  { name: "WorkingCar battery", category: "hazardous-waste", difficulty: "Easiest" },
 
   // Easy
   { name: "Phenyl bottle", category: "hazardous-waste", difficulty: "Easy" },
@@ -163,7 +163,7 @@ const wetWasteItems: WasteItemType[] = [
   { name: "Dandruff shampoo", category: "hazardous-waste", difficulty: "Easy" },
   { name: "Spray paint", category: "hazardous-waste", difficulty: "Easy" },
   { name: "Hair dye", category: "hazardous-waste", difficulty: "Easy" },
-  { name: "Phone battery", category: "hazardous-waste", difficulty: "Easy" },
+  { name: "Healthy Phone battery", category: "hazardous-waste", difficulty: "Easy" },
 
   // Medium
   { name: "Bleach bottle", category: "hazardous-waste", difficulty: "Medium" },
@@ -204,7 +204,7 @@ const wetWasteItems: WasteItemType[] = [
   { name: "Dental floss", category: "sanitary-waste", difficulty: "Easiest" },
   { name: "Cotton balls", category: "sanitary-waste", difficulty: "Easiest" },
   { name: "Face wipes", category: "sanitary-waste", difficulty: "Easiest" },
-  { name: "Paper towel", category: "sanitary-waste", difficulty: "Easiest" },
+  { name: "Contact lenses", category: "sanitary-waste", difficulty: "Easiest" },
   { name: "Disposable gloves", category: "sanitary-waste", difficulty: "Easiest" },
 
   // Easy
