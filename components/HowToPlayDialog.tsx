@@ -15,7 +15,7 @@ const HowToPlayDialog: React.FC<HowToPlayDialogProps> = ({ isOpen, onClose }) =>
       <div className={styles.dialogContent}>
         <h2 className={styles.dialogTitle}>How to Play</h2>
         <ol className={styles.dialogList}>
-          <li className={styles.dialogListItem}>Hold to Drag and drop waste items into the correct bins.</li>
+          <li className={styles.dialogListItem}>Drag and drop waste items into the correct bins.</li>
           <li className={styles.dialogListItem}>Double-click on bins to see what goes in them.</li>
           <li className={styles.dialogListItem}>Fill a bin completely to win and claim an NFT.</li>
           <li className={styles.dialogListItem}>Keep playing to top the leaderboard!</li>
