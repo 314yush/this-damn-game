@@ -108,7 +108,7 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 20px;
   margin-top: 10px;
 }
 .bin-wrapper {
@@ -151,13 +151,13 @@ body {
     margin-bottom: 10px;
   }
   .score {
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-bottom: 10px;
   }
   .bins-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    gap: 10px;  
     width: 80%; /* Increased from 50% to 80% */
     margin: 30px auto;
     margin-top: 10px; /* Center align the container */
