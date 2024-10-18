@@ -1,57 +1,63 @@
 .bubble {
   position: absolute;
+  bottom: calc(100% + 20px); /* Position above the bin with a fixed gap */
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgb(255, 255, 255);
+  color: #334;
   display: inline-block;
-  margin: 20px;
-  text-align: center;
-  font-family: 'Press Start 2P', cursive;
-  font-size: 16px;
-  line-height: 1.3em;
-  background-color: #fff;
-  color: #000;
+  font-family: 'Play';
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.5em;
   padding: 12px;
-  box-shadow: 0 -4px #fff, 0 -8px #000, 4px 0 #fff, 4px -4px #000, 8px 0 #000, 0 4px #fff, 0 8px #000, -4px 0 #fff, -4px 4px #000, -8px 0 #000, -4px -4px #000, 4px 4px #000;
-  box-sizing: border-box;
-  width: 200px;
-  z-index: 10;
+  text-align: center;
+  vertical-align: top;
+  min-width: 200px;
+  max-width: 90%;
+  border-radius: 0.4em;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* z-index: 10; */
 }
 
 .bubble::after {
   content: '';
-  display: block;
   position: absolute;
-  box-sizing: border-box;
+  bottom: -15px;
+  left: 50%;
+  border: 15px solid transparent;
+  border-top-color: rgb(255, 255, 255);
+  border-bottom: 0;
+  margin-left: -15px;
 }
 
-.bubble.top::after {
-  height: 4px;
-  width: 4px;
-  top: -8px;
-  left: 32px;
-  box-shadow: 0 -4px #000, 0 -8px #000, 0 -12px #000, 0 -16px #000, -4px -12px #000, -8px -8px #000, -12px -4px #000, -4px -4px #fff, -8px -4px #fff, -4px -8px #fff, -4px 0 #fff, -8px 0 #fff, -12px 0 #fff;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .bubble {
+    font-size: 12px;
+    min-width: 150px;
+    bottom: calc(100% + 20px); /* Adjust for mobile */
+  }
 }
 
-.bubble.right::after {
-  height: 4px;
-  width: 4px;
-  top: 84px;
-  right: -8px;
-  background: white;
-  box-shadow: 4px -4px #fff, 4px 0 #fff, 8px 0 #fff, 0 -8px #fff, 4px 4px #000, 8px 4px #000, 12px 4px #000, 16px 4px #000, 12px 0 #000, 8px -4px #000, 4px -8px #000, 0 -4px #fff;
+/* Optional: Add these classes if you want to use them */
+.large {
+  font-size: 18px;
+  padding: 16px;
 }
 
-.bubble.bottom::after {
-  height: 4px;
-  width: 4px;
-  bottom: -8px;
-  left: 32px;
-  box-shadow: 0 4px #000, 0 8px #000, 0 12px #000, 0 16px #000, -4px 12px #000, -8px 8px #000, -12px 4px #000, -4px 4px #fff, -8px 4px #fff, -4px 8px #fff, -4px 0 #fff, -8px 0 #fff, -12px 0 #fff;
+.rounded {
+  border-radius: 0.8em;
+  font-style: normal;
+  font-weight: 400;
+
 }
 
-.bubble.left::after {
-  height: 4px;
-  width: 4px;
-  top: 20px;
-  left: -8px;
-  background: white;
-  box-shadow: -4px -4px #fff, -4px 0 #fff, -8px 0 #fff, 0 -8px #fff, -4px 4px #000, -8px 4px #000, -12px 4px #000, -16px 4px #000, -12px 0 #000, -8px -4px #000, -4px -8px #000, 0 -4px #fff;
+.blue {
+  background: #ddf;
+  color: #334;
+}
+
+.blue::after {
+  border-top-color: #ddf;
 }

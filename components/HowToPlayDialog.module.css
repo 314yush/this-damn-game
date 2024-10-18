@@ -1,0 +1,85 @@
+.dialogOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.dialogContent {
+  background-color: rgb(246, 246, 246);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 80%;
+  max-height: 80%;
+  overflow-y: auto;
+  
+}
+
+.dialogTitle {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #333;
+  text-align: center;
+}
+
+.dialogText {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #666;
+  text-align: left;
+}
+
+.dialogList {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.dialogListItem {
+  margin-bottom: 10px;
+}
+
+.closeButton {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  
+}
+
+.closeButton:hover {
+  background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+  .dialogContent {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .dialogTitle {
+    font-size: 20px;
+  }
+
+  .dialogText {
+    font-size: 14px;
+  }
+
+  .closeButton {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}

@@ -11,6 +11,7 @@ import { Leaderboard } from '../components/Leaderboard'
 import { FaInfoCircle } from 'react-icons/fa';
 import Navbar from '../components/Navbar';
 import styles from './Home.module.css'; // Make sure to create this CSS module file
+import HowToPlayDialog from '../components/HowToPlayDialog';
 
 // Define difficulty levels
 export type Difficulty = 'Easiest' | 'Easy' | 'Medium' | 'Difficult' | 'Most Difficult';
@@ -370,6 +371,8 @@ export default function Home() {
   const [currentDifficulty, setCurrentDifficulty] = useState<Difficulty>('Easiest');
   const [usedItems, setUsedItems] = useState<string[]>([]);
 
+  const [showHowToPlay, setShowHowToPlay] = useState(false);
+
   const enableGuestMode = () => {
     setIsGuestMode(true);
   };
@@ -565,19 +568,12 @@ export default function Home() {
           <div className='game-container'>
             <h1 className='game-title'>
               How Wasted Are You?!
-              <span className="info-icon">
+              <span className="info-icon" onClick={() => setShowHowToPlay(true)}>
                 <FaInfoCircle className="icon-small" />
-                <span className="tooltip">
-                  <h3>How to Play:</h3>
-                  <ol>
-                    <li>Hold to Drag and drop waste items into the correct bins.</li>
-                    <li>Double-click on bins to see what goes in them.</li>
-                    <li>Fill a bin completely to win and claim an NFT.</li>
-                    <li>Keep playing to top the leaderboard!</li>
-                  </ol>
-                </span>
               </span>
             </h1>
+
+            <HowToPlayDialog isOpen={showHowToPlay} onClose={() => setShowHowToPlay(false)} />
 
             <div className='wallet-button-container'>
               {!authenticated && !isGuestMode && (
