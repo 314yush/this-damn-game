@@ -11,6 +11,8 @@ interface BinProps {
   isCorrectBin: boolean;
   isTooltipActive: boolean;
   onTooltipToggle: (category: WasteCategory) => void;
+  onBinClick: (category: WasteCategory) => void;
+  isMobile: boolean;
 }
 
 const getBinColor = (category: WasteCategory): string => {
@@ -110,7 +112,9 @@ const Bin: React.FC<BinProps> = ({
   fillLevel, 
   isCorrectBin, 
   isTooltipActive, 
-  onTooltipToggle 
+  onTooltipToggle,
+  onBinClick,
+  isMobile
 }) => {
   const [showSpeechBubble, setShowSpeechBubble] = useState(false);
   const [speechBubbleContent, setSpeechBubbleContent] = useState('');
@@ -135,9 +139,13 @@ const Bin: React.FC<BinProps> = ({
     onDrop(item, category);
   };
 
-  const handleDoubleClick = (e: React.MouseEvent) => {
+  const handleClick = (e: React.MouseEvent) => {
     e.stopPropagation();
-    onTooltipToggle(category);
+    if (isMobile) {
+      onBinClick(category);
+    } else {
+      onTooltipToggle(category);
+    }
   };
 
   const binColor = getBinColor(category);
@@ -162,11 +170,12 @@ const Bin: React.FC<BinProps> = ({
         }}
         onDragOver={(e) => e.preventDefault()}
         onDrop={handleDrop}
+        onClick={handleClick}
       >
         <div className="fill-level" style={{ height: `${fillLevel}%` }}></div>
         <div className="bin-label">{category.replace('-', ' ')}</div>
       </div>
-      {isTooltipActive && (
+      {isTooltipActive && !isMobile && (
         <div className="tooltip">
           <p>{binDescription}</p>
         </div>

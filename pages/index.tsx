@@ -372,6 +372,16 @@ export default function Home() {
   const [usedItems, setUsedItems] = useState<string[]>([]);
 
   const [showHowToPlay, setShowHowToPlay] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const enableGuestMode = () => {
     setIsGuestMode(true);
@@ -497,8 +507,8 @@ export default function Home() {
     }
   };
 
-  const handleBinClick = (binCategory: string) => {
-    if (currentItem) {
+  const handleBinClick = (binCategory: WasteCategory) => {
+    if (isMobile && currentItem) {
       handleDrop(currentItem, binCategory);
     }
   };
@@ -612,6 +622,8 @@ export default function Home() {
                       isCorrectBin={correctBin === category}
                       isTooltipActive={activeTooltip === category}
                       onTooltipToggle={handleTooltipToggle}
+                      onBinClick={handleBinClick}
+                      isMobile={isMobile}
                     />
                   ))}
                 </div>
