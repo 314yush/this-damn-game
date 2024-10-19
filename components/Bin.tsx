@@ -127,7 +127,7 @@ const Bin: React.FC<BinProps> = ({
       
       const timer = setTimeout(() => {
         setShowSpeechBubble(false);
-      }, 5000);
+      }, 3000);
 
       return () => clearTimeout(timer);
     }
