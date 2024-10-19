@@ -154,12 +154,14 @@ const Bin: React.FC<BinProps> = ({
   return (
     <div className="bin-container" style={{ position: 'relative', display: 'inline-block' }}>
       {showSpeechBubble && (
-        <SpeechBubble 
-          message={speechBubbleContent} 
-          position="top"
-          large={false}
-          rounded={true}
-        />
+        <div style={{ position: 'absolute', bottom: '100%', left: 0, right: 0, zIndex: 30 }}>
+          <SpeechBubble 
+            message={speechBubbleContent} 
+            position="top"
+            large={false}
+            rounded={true}
+          />
+        </div>
       )}
       <div 
         className={`bin ${isCorrectBin ? 'correct-bin' : ''}`}

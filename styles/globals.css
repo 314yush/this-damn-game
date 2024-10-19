@@ -1053,3 +1053,8 @@ img {
 .dialogContent li {
   margin-bottom: 10px;
 }
+
+.waste-item {
+  z-index: 40;
+  position: relative;
+}
